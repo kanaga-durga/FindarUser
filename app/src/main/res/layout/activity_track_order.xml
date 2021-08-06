@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.findar.user.Activity.MainActivity">
+    <include layout="@layout/header"
+        android:id="@+id/back_arrow">
+    </include>
+    <TextView
+        android:id="@+id/textDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_trackorder"
+        style="@style/TextViewHeading"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textDetail">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relativeMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp">
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp">
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        tools:context="org.findar.user.Activity.MainActivity"
+        tools:ignore="FragmentTagUsage" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeAddres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeMap"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:background="@drawable/rounded_corner">
+        <TextView
+            android:id="@+id/textLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="@string/textLocation"
+            android:textColor="@color/black_text"
+            android:textSize="@dimen/labelMediumSize"></TextView>
+        <TextView
+            android:id="@+id/textAddressContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Address Display"
+            android:textColor="@color/circle_border"
+            android:textSize="@dimen/labelSize"
+            android:lineSpacingExtra="5dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:padding="5dp"
+            android:layout_below="@+id/textLocation">
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/relativeHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textAddressContent"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_white">
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_alignParentLeft="true">
+                <TextView
+                    android:id="@+id/textTime"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_estimatetime"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textMediumSize"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:textColor="@color/primary_color"/>
+
+                <TextView
+                    android:id="@+id/textEstimateTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/text_estimatetime"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black_find1"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@color/black_find1">
+                </View>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/linearLayout"
+                android:gravity="center"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/text_distance"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textMediumSize" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/text_distance"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black_find1"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:textSize="@dimen/labelSmallSize"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeAddres"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:id="@+id/linearShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageViewShop"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/icon_shop"></ImageView>
+            <ImageView
+                android:id="@+id/imageViewHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/imageViewShop"
+                android:background="@drawable/icon_home"></ImageView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/linearShop">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/icon_line">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/relativeLine">
+
+            <TextView
+                android:id="@+id/textDate"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/text_estimatetime"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="50dp"
+                android:textColor="@color/black_find1"/>
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/text_estimatetime"
+                android:gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_below="@+id/textDate"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:textSize="@dimen/labelSize"/>
+
+
+        <TextView
+            android:id="@+id/textHome"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/text_estimatetime"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/textStatus"
+            android:textColor="@color/black_find1"/>
+
+            <TextView
+                android:id="@+id/textStatus1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/text_estimatetime"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/textHome"
+                android:textColor="@color/black"
+                android:textSize="@dimen/labelSize"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeStatus"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_black"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <com.pkmmte.view.CircularImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/imageSize"
+                android:layout_height="@dimen/imageSize"
+                android:padding="5dp"
+                android:src="@drawable/plumber" />
+
+            <TextView
+                android:id="@+id/textCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:layout_toLeftOf="@+id/imageChat"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="left"
+                android:text="@string/companyname"
+                android:textColor="@color/white"
+                android:textSize="@dimen/labelSize"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imageViewcall"
+                android:layout_width="@dimen/imageSize"
+                android:layout_height="@dimen/imageSize"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/circle_bg"
+                android:src="@drawable/bx_phone_call"
+                android:padding="15dp">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/imageChat"
+                android:layout_width="@dimen/imageSize"
+                android:layout_height="@dimen/imageSize"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/imageViewcall"
+                android:background="@drawable/circle_bg_white"
+                android:src="@drawable/bx_chat"
+                android:padding="15dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/drawer_layout"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/white"-->
+<!--    tools:context=".Activity.Service_Types_Activity">-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/header"
+        android:id="@+id/back_arrow">
+    </include>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/back_arrow">
+
+    <!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:background="@color/white"-->
+<!--            app:elevation="0dp"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                android:elevation="4dp" />-->
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+        <TextView
+
+            android:id="@+id/txt_choose_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="70dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="@string/choose_service"
+            android:textColor="@color/black_find"
+            android:textSize="@dimen/titleLargeSize" />
+
+        <TextView
+            android:id="@+id/txt_signup_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_choose_service"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="20dp"
+            android:alpha="0.4"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/choose_service1"
+            android:textColor="@color/black_find"
+            android:textSize="@dimen/labelSize" />
+
+        <TextView
+            android:id="@+id/txt_services_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_signup_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:textAlignment="center"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/recycleViewServiceSCRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/txt_signup_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+
+                android:scrollbars="vertical" />
+        </ScrollView>
+
+    </RelativeLayout>
+
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:id="@+id/nav_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="start"-->
+<!--        android:background="@color/white"-->
+<!--        app:itemIconTint="@color/black_find"-->
+<!--        app:headerLayout="@layout/nav_header"-->
+<!--        app:itemTextColor="@color/black_find"-->
+<!--        app:menu="@menu/drawer_menu" />-->
+</RelativeLayout>
+
+<!--</androidx.drawerlayout.widget.DrawerLayout>-->

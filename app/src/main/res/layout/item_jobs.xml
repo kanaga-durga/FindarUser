@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="15dp"
+
+        android:background="@drawable/rounded_corner">
+        <com.pkmmte.view.CircularImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            android:src="@drawable/plumber" />
+        <TextView
+            android:id="@+id/textCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/companyname"
+            android:fontFamily="@font/gilroy_medium"
+            android:layout_toRightOf="@+id/imageView"
+            android:padding="5dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/textStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:fontFamily="@font/gilroy_light"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textCompany"
+
+            android:textColor="@color/text_blue"
+            android:visibility="visible"
+            android:textSize="@dimen/labelSmallSize"
+            android:paddingRight="5dp">
+
+        </TextView>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_below="@+id/textCompany"
+            android:padding="0dp"
+            android:progressTint="@color/primary_color"
+            android:layout_marginLeft="5dp"
+            style="?android:attr/ratingBarStyleSmall"/>
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/companyname"
+            android:layout_below="@+id/ratingBar"
+            android:fontFamily="@font/gilroy_medium"
+            android:layout_toRightOf="@+id/imageView"
+            android:textSize="@dimen/labelSmallSize"
+            android:padding="5dp">
+
+        </TextView>
+        <RelativeLayout
+            android:id="@+id/relativeHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textDate"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_white">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <TextView
+                android:id="@+id/textCallout"
+                android:layout_height="wrap_content"
+                android:text="@string/callout"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textPerHour"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="@string/perhour"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textTime"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="@string/time"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginTop="5dp"
+            android:weightSum="3">
+            <TextView
+
+                android:layout_height="wrap_content"
+                android:text="@string/callout"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textSize="@dimen/labelSmallSize"
+                android:textColor="@color/black_find1"/>
+
+            <TextView
+
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="@string/perhour"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textColor="@color/black_find1"
+                android:fontFamily="@font/gilroy_medium"
+                android:textSize="@dimen/labelSmallSize"/>
+
+            <TextView
+
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:text="@string/time"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textColor="@color/black_find1"
+                android:fontFamily="@font/gilroy_medium"
+                android:textSize="@dimen/labelSmallSize"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelrequest"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/red"
+            android:layout_below="@+id/relativeHead">
+
+        </TextView>
+
+    </RelativeLayout>
+
+<!-- Dummy Layout -->
+    <RelativeLayout
+        android:id="@+id/relativeDummy"
+        android:layout_below="@+id/relativeContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="@drawable/rounded_corner">
+
+        <ImageView
+            android:id="@+id/imageViewDummy"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            android:src="@drawable/circle_bg_white" />
+        <TextView
+            android:id="@+id/textCompanyDummy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company Name"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:background="@drawable/rounded_white"
+            android:layout_toRightOf="@+id/imageViewDummy">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/textDateDummy"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:text="@string/companyname"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:layout_below="@+id/textCompanyDummy"
+            android:background="@drawable/rounded_white"
+            android:layout_toRightOf="@+id/imageViewDummy">
+
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textDateDummy"
+
+            android:layout_marginTop="20dp"
+
+            android:background="@drawable/rounded_white">
+            <LinearLayout
+                android:id="@+id/linearLayoutDummy"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <TextView
+                    android:id="@+id/button1Dummy"
+                    android:layout_height="10dp"
+                    android:text="@string/callout"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/terms"/>
+
+                <TextView
+                    android:id="@+id/button2Dummy"
+                    android:layout_height="10dp"
+                    android:layout_width="0dp"
+                    android:text="@string/perhour"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/terms"/>
+
+                <TextView
+                    android:id="@+id/button3Dummy"
+                    android:layout_height="10dp"
+                    android:layout_width="1dp"
+                    android:text="@string/time"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/terms"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linearLayoutDummy"
+                android:layout_marginBottom="15dp"
+                android:weightSum="3">
+                <TextView
+
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/callout"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/terms"/>
+
+                <TextView
+
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_width="0dp"
+                    android:text="@string/perhour"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/terms"/>
+
+                <TextView
+
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_width="0dp"
+                    android:text="@string/time"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/terms"/>
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/loading"></ImageView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

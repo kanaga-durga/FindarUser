@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="buttonsize">20dp</dimen>
+    <dimen name="titleSize">26dp</dimen>
+    <dimen name="titleLargeSize">28dp</dimen>
+    <dimen name="editSize">18dp</dimen>
+    <dimen name="labelSize">14dp</dimen>
+    <dimen name="labelSmallSize">12dp</dimen>
+
+    <dimen name="labelLargeSize">20dp</dimen>
+    <dimen name="labelMediumSize">18dp</dimen>
+    <dimen name="textMediumSize">16dp</dimen>
+    <integer name="defalult_code">27</integer>
+
+    <dimen name="buttonMediumsize">20dp</dimen>
+    <dimen name="textSmallSize">10dp</dimen>
+
+    <dimen name="imageSize">50dp</dimen>
+
+</resources>

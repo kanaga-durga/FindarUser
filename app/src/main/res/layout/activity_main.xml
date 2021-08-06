@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="org.findar.user.Activity.Service_Types_Activity">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.findar.user.Activity.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="org.findar.user.Activity.MainActivity"
+        tools:ignore="FragmentTagUsage"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/RL_overall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="4dp" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <RelativeLayout
+            android:id="@+id/welcome_with_plus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/home_bottom_background"
+            android:padding="20dp"
+
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/top_open_arrow"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/linearWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.5"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_hi_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/back_arrow"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textColor="@color/black_find"
+                        android:textSize="35sp"
+                        tools:ignore="ObsoleteLayoutParam" />
+
+                    <TextView
+                        android:id="@+id/textClickMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="70dp"
+                        android:alpha="0.4"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:text="@string/homepage_content"
+                        android:textColor="@color/black_find"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_plus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="+"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                tools:ignore="HardcodedText" />
+            <!-- Potential Job Layout -->
+
+            <RelativeLayout
+                android:id="@+id/potentialLayout"
+                android:visibility="gone"
+                android:layout_below="@+id/txt_plus"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/textPotential"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/potentialString"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/labelSize"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:visibility="gone">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleViewPotential"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/textPotential"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/yourjobLayout"
+                android:visibility="gone"
+                android:layout_below="@+id/potentialLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yourjobString">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleViewYourjob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/welcome_with_search_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/home_bottom_background"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_top_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/top_open_arrow"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/back_arrow"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="@string/welcome"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_find"
+                    android:textSize="35sp"
+                    tools:ignore="ObsoleteLayoutParam" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.4"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="@string/homepage_content1"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_find"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_whats_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/edittext_border"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:hint="@string/what_is_your_location"
+                    android:padding="20dp"
+                    android:textColor="@color/black_find"
+                    android:textColorHint="@color/black_find1"
+                    android:textSize="18sp"
+                    tools:ignore="Autofill,TextFields" />
+
+                <LinearLayout
+                    android:id="@+id/LL_List_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="4"
+                            android:src="@drawable/icon_home"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:fontFamily="@font/gilroy_medium"
+                                android:text="@string/home"
+                                android:textColor="@color/black_find"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:alpha="0.4"
+                                android:fontFamily="@font/gilroy_medium"
+                                android:text="@string/home1"
+                                android:textColor="@color/black_find"
+                                android:textSize="15sp" />
+
+                            <View
+                                android:id="@+id/separator"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dip"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="20dp"
+                                android:alpha="0.4"
+                                android:background="@color/black_find"
+                                tools:ignore="ObsoleteLayoutParam" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="4"
+                            android:src="@drawable/icon_work"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:fontFamily="@font/gilroy_medium"
+                                android:text="@string/work"
+                                android:textColor="@color/black_find"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:alpha="0.4"
+                                android:fontFamily="@font/gilroy_medium"
+                                android:text="@string/work1"
+                                android:textColor="@color/black_find"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/terms"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:padding="20dp"
+                        android:text="@string/recently_search"
+                        android:textColor="@color/black_find"
+                        android:textSize="22sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="4"
+                            android:src="@drawable/icon_time"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:fontFamily="@font/gilroy_medium"
+                                android:text="@string/work"
+                                android:textColor="@color/black_find"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:alpha="0.4"
+                                android:fontFamily="@font/gilroy_medium"
+                                android:text="@string/work1"
+                                android:textColor="@color/black_find"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_whats_location_continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/continue_"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+
+                <TextView
+                    android:id="@+id/set_location_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="@string/set_location_on_map"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_color"
+                    android:textSize="23sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:itemIconTint="@color/black_find"
+        app:headerLayout="@layout/nav_header"
+        app:itemTextColor="@color/black_find"
+
+        app:menu="@menu/drawer_menu" >
+<!--        <TextView-->
+<!--            android:id="@+id/textViewLogout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="96dp"-->
+<!--            android:layout_gravity="bottom"-->
+
+<!--            android:background="#600F"-->
+<!--            android:gravity="center"-->
+<!--            android:text="I STAND BY MY SELF" />-->
+        <include layout="@layout/drawer_logout"></include>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

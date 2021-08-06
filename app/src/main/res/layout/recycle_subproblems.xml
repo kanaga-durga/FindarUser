@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/LL_Sub_Problems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/terms_background"
+        android:padding="20dp"
+        android:weightSum="5"
+        tools:ignore="UselessParent">
+        <TextView
+            android:id="@+id/problems_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/txt_Sub_problems_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:textColor="@color/black_find"
+            android:textSize="@dimen/labelMediumSize"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/d_icon_right_arrow_black"
+            android:layout_weight="4"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+    </LinearLayout>
+
+</RelativeLayout>

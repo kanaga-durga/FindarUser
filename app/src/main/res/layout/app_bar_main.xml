@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.findar.user.Activity.MainActivity">
+
+<!--    <fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        xmlns:tools="http://schemas.android.com/tools"-->
+<!--        android:id="@+id/map1"-->
+<!--        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:context=".Activity.MainActivity" />-->
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="org.findar.user.Activity.MainActivity" />
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/welcome_with_plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_bottom_background"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/top_open_arrow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_phn_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/back_arrow"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="@string/welcome"
+                    android:textColor="@color/black_find"
+                    android:textSize="35dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="70dp"
+                    android:alpha="0.4"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="@string/homepage_content"
+                    android:textColor="@color/black_find"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_plus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="35dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/welcome_with_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_bottom_background">
+
+        <ImageView
+            android:id="@+id/img_top_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/top_open_arrow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/back_arrow"
+                android:fontFamily="@font/gilroy_medium"
+                android:text="@string/welcome"
+                android:textAlignment="center"
+                android:textColor="@color/black_find"
+                android:textSize="35dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alpha="0.4"
+                android:textAlignment="center"
+                android:fontFamily="@font/gilroy_medium"
+                android:text="@string/homepage_content1"
+                android:textColor="@color/black_find"
+                android:textSize="15dp" />
+
+            <EditText
+                android:layout_margin="20dp"
+                android:id="@+id/et_whats_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edittext_border"
+                android:fontFamily="@font/gilroy_medium"
+                android:hint="@string/what_is_your_location"
+                android:padding="20dp"
+                android:textColor="@color/black_find"
+                android:textColorHint="@color/black_find1"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/LL_List_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_home"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="4"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:textColor="@color/black_find"
+                            android:textSize="18sp"
+                            android:layout_margin="2dp"
+                            android:text="@string/home"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:textColor="@color/black_find"
+                            android:alpha="0.4"
+                            android:textSize="15sp"
+                            android:layout_margin="2dp"
+                            android:text="@string/home1"/>
+                        <View android:id="@+id/separator"
+                            android:background="@color/black_find"
+                            android:layout_width = "fill_parent"
+                            android:layout_height="1dip"
+                            android:alpha="0.4"
+                            android:layout_marginTop="20dp"
+                            android:layout_centerVertical ="true"
+                            android:layout_alignParentTop="true"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_work"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="4"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:textColor="@color/black_find"
+                            android:textSize="18sp"
+                            android:layout_margin="2dp"
+                            android:text="@string/work"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:textColor="@color/black_find"
+                            android:alpha="0.4"
+                            android:textSize="15sp"
+                            android:layout_margin="2dp"
+                            android:text="@string/work1"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recently_search"
+                    android:padding="20dp"
+                    android:textColor="@color/black_find"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textSize="22sp"
+                    android:background="@color/terms"/>
+
+                <LinearLayout
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_time"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="4"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:textColor="@color/black_find"
+                            android:textSize="18sp"
+                            android:layout_margin="2dp"
+                            android:text="@string/work"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:textColor="@color/black_find"
+                            android:alpha="0.4"
+                            android:textSize="15sp"
+                            android:layout_margin="2dp"
+                            android:text="@string/work1"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_margin="20dp"
+                android:id="@+id/txt_whats_location_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/gilroy_medium"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/continue_"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+
+
+            <TextView
+                android:id="@+id/set_location_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/set_location_on_map"
+                android:fontFamily="@font/gilroy_medium"
+                android:textColor="@color/primary_color"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="23dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

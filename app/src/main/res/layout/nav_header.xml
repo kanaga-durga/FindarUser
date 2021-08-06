@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/LL_NAV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="16dp">
+    <com.pkmmte.view.CircularImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/plumber" />
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_medium"
+        android:paddingTop="10dp"
+        android:textSize="18sp"
+        android:text="Coding in Flow"
+        android:textColor="@color/black_find"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textCompany"
+            android:padding="0dp"
+            style="?android:attr/ratingBarStyleSmall"/>
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="(4.0)">
+
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.4"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="info@codinginflow.com"
+        android:textColor="@color/black_find"
+        tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textViewVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.4"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/version"
+            android:textColor="@color/black_find"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/nav_chat"
+        android:layout_below="@+id/LL_NAV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_find"
+        android:fontFamily="@font/gilroy_medium"
+        android:padding="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/chat_message"
+        android:textAlignment="center"
+        android:textColor="@color/primary_color"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

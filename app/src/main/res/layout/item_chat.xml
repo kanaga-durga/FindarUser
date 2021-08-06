@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/RelativeParentLeft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RelativeLeft"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="200dp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_border">
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_name"
+            android:padding="10dp"
+            android:textSize="@dimen/labelSmallSize">
+        </TextView>
+        <TextView
+            android:id="@+id/textContent"
+            android:layout_below="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_name"
+            android:padding="5dp">
+        </TextView>
+    </RelativeLayout>
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_below="@+id/RelativeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_name"
+            android:textSize="@dimen/textSmallSize"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:id="@+id/RelativeParentRight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/RelativeParentLeft"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RelativeRight"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="200dp"
+        android:padding="5dp"
+        android:background="@drawable/terms_background">
+        <TextView
+            android:id="@+id/textName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/your_name"
+            android:padding="10dp"
+            android:visibility="gone">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textContent1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textName1"
+            android:layout_marginTop="17dp"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="@string/your_name"></TextView>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textDate1"
+        android:layout_below="@+id/RelativeRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_name"
+        android:padding="10dp"
+        android:gravity="right"
+        android:textSize="@dimen/textSmallSize"
+        android:layout_marginRight="10dp">
+    </TextView>
+</RelativeLayout>
+
+
+</RelativeLayout>

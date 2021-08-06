@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:id="@+id/recyclearView"
+    android:background="@drawable/history_round">
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/status"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:gravity="right"
+        android:fontFamily="@font/gilroy_bold"
+        android:textSize="@dimen/labelSmallSize"
+        android:background="@drawable/history_upcoming_round">
+    </TextView>
+    <com.pkmmte.view.CircularImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textStatus"
+        android:src="@drawable/plumber"
+        android:layout_margin="15dp"
+        android:background="@drawable/circle_bg_black_white"/>
+
+    <TextView
+        android:id="@+id/textCompanyname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/companyname"
+        android:textColor="@color/black_text"
+        android:layout_below="@+id/textStatus"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/gilroy_medium"
+        android:textSize="@dimen/labelMediumSize"
+        android:layout_toRightOf="@+id/imageView">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCompanyname"
+        android:layout_toRightOf="@+id/imageView"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="@string/companyname"
+        android:paddingTop="5dp"
+        android:textColor="@color/black_find"
+        android:textSize="@dimen/labelSmallSize">
+
+    </TextView>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1061597167444",
+    "project_id": "findaruser",
+    "storage_bucket": "findaruser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061597167444:android:1388176cceacf3b46ed2c1",
+        "android_client_info": {
+          "package_name": "org.findar.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061597167444-qlp2tnc5o01o374rqdver313ru5jt1oi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.findar.user",
+            "certificate_hash": "76fd6474bf24ab143d1df64ebcc1d3efe9729f52"
+          }
+        },
+        {
+          "client_id": "1061597167444-aom2kgk6umtns7aitu3meflgkedv3l16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhg9hVL7dGGvBcmcknE0n-yaXUGDyeteg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061597167444-aom2kgk6umtns7aitu3meflgkedv3l16.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1061597167444-k8pq1ig8pph3cshnev7259q35bmrldgd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.itflex.FindarUser"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

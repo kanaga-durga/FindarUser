@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="org.findar.user.Activity.Service_Types_Activity">
+
+    <include layout="@layout/header"
+        android:id="@+id/back_arrow">
+    </include>
+    <TextView
+        android:id="@+id/textDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/terms_and_condition"
+        style="@style/TextViewHeading"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back_arrow"
+        android:layout_marginBottom="30dp">
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:paddingBottom="10dp"
+            android:textSize="@dimen/labelSize"
+            android:textColor="@color/black_find"
+            android:lineSpacingExtra="2dp">
+
+        </TextView>
+    </ScrollView>
+
+</RelativeLayout>

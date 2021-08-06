@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_white"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/textHead"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/cancelTitle"
+        android:textSize="@dimen/labelLargeSize"
+        android:gravity="center"
+        android:padding="10dp"
+        android:fontFamily="@font/gilroy_medium"/>
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/terms_border"
+        android:text="@string/cancelMsg"
+        android:layout_below="@+id/textHead"
+        android:textSize="@dimen/labelSize"
+
+        android:gravity="center"
+        android:padding="10dp"
+        android:fontFamily="@font/gilroy_medium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/dialogButtonOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yes"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@+id/image"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/red"
+            android:fontFamily="@font/gilroy_medium"
+            android:backgroundTint="@color/logout_color"/>
+        <Button
+            android:id="@+id/dialogButtonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nothanks"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/image"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:backgroundTint="@android:color/black" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="org.findar.user.Activity.SubProblemsActivity">
+    <ImageView
+        android:id="@+id/get_problem_img"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="300dp"
+        tools:ignore="ContentDescription" />
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/back_arrow"
+        android:padding="18dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/circle_bg_white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/get_problem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/buttonsize"/>
+    <TextView
+        android:layout_below="@+id/get_problem_img"
+        android:id="@+id/txt_signup_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:alpha="0.4"
+        android:lineSpacingExtra="8dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="@string/sub_problem_content"
+        android:textColor="@color/black_find"
+        android:textSize="@dimen/labelSize" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txt_subproblems_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_signup_content"
+        android:fontFamily="@font/gilroy_medium"
+        android:textSize="20sp"
+        android:textColor="@color/primary_color"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"/>
+    <ScrollView
+        android:id="@+id/recycleViewSubProblemsSCRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/txt_signup_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewSubProblems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+    </ScrollView>
+</RelativeLayout>

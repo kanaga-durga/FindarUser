@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="org.findar.user.Fragment.Set_Date_Time_Fragment">
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:padding="10dp"
+        android:src="@drawable/back_arrow"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back_arrow">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/RT_BTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        >
+
+
+        <TextView
+            android:id="@+id/txt_set_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/set_date_time"
+            android:textColor="@color/black_find"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/txt_set_date_time1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_set_date_time"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="70dp"
+            android:alpha="0.4"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/set_date_time1"
+            android:textColor="@color/black_find"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_set_date_time_soon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_set_date_time1"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/gilroy_medium"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/as_soon_possible"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/txt_set_date_time_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_set_date_time_soon"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/gilroy_medium"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/schedules"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/RL_DATE_TIME_PIC"
+        android:layout_below="@+id/RT_BTN"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/date_time_bottom_background">
+        <RelativeLayout
+            android:id="@+id/RL_DATE_TIME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/date_time_border"
+            android:backgroundTint="@color/white"
+            android:padding="20dp"
+            android:layout_margin="20dp"
+            android:textAlignment="center">
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Wed, 9 Sep 2020"
+                android:fontFamily="@font/gilroy_medium"
+                android:textColor="@color/black_find"
+                android:textColorHint="@color/black_find1"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+            <View
+                android:layout_toRightOf="@+id/txt_date"
+                android:id="@+id/separator"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:alpha="0.4"
+                android:background="@color/black_find"
+                tools:ignore="RtlHardcoded" />
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_toRightOf="@+id/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="09:42 PM"
+                android:textColorHint="@color/black_find1"
+                android:fontFamily="@font/gilroy_medium"
+                android:textSize="18sp"
+                android:textColor="@color/black_find"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/txt_done"
+            android:layout_below="@+id/RL_DATE_TIME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/white"
+            android:text="@string/done"
+            android:padding="20dp"
+            android:layout_margin="20dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/labelLargeSize"
+            />
+
+    </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="org.findar.user.Activity.SignupActivity">
+
+    <include layout="@layout/header"
+        android:id="@+id/back_arrow">
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/RT_Phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/back_arrow"
+        android:visibility="visible">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/back_arrow"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="30dp"-->
+<!--            android:src="@drawable/back_arrow" />-->
+
+<!--        <include layout="@layout/header"-->
+<!--            android:id="@+id/back_arrow">-->
+<!--        </include>-->
+
+        <TextView
+            android:id="@+id/txt_phn_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/welcome"
+            android:textColor="@color/black_find"
+            android:textSize="@dimen/titleSize" />
+
+        <TextView
+            android:id="@+id/txt_signup_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_phn_num"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:alpha="0.4"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/signup_content"
+            android:textColor="@color/black_find"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/LL_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_signup_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/edittext_border"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingTop="12dp"
+                app:ccpDialog_backgroundColor="@color/white"
+                app:ccpDialog_textColor="@color/black"
+                app:ccp_flagBorderColor="@color/white"
+                app:ccp_showNameCode="false"
+                app:ccp_defaultPhoneCode="@integer/defalult_code"/>
+
+            <EditText
+                android:id="@+id/et_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/gilroy_medium"
+                android:hint="@string/phone_number"
+                android:inputType="number"
+                android:padding="20dp"
+                android:maxLength="10"
+                android:textColor="@color/black_find"
+                android:textColorHint="@color/black_find1"
+                android:textSize="@dimen/editSize" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_phn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LL_phone"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/gilroy_bold"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/continue_"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonsize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RT_OTP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/back_arrow_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:src="@drawable/back_arrow" />
+
+        <LinearLayout
+            android:id="@+id/LL_verify_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back_arrow_otp"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/txt_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/gilroy_medium"
+                android:text="@string/verify_otp"
+                android:textColor="@color/black_find"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/txt_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="@string/resend"
+                android:textAlignment="textEnd"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/editSize" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_login_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LL_verify_otp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:alpha="0.4"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/otp_content"
+            android:textColor="@color/black_find"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/txt_demo_OTP"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_login_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:textColor="@color/primary_color"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:id="@+id/LL_OTP_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_demo_OTP"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <EditText
+                android:id="@+id/et_OPT_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_border"
+                android:maxLength="1"
+                android:padding="20dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/black_find" />
+
+            <EditText
+                android:id="@+id/et_OPT_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_border"
+                android:maxLength="1"
+                android:padding="20dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/black_find" />
+
+            <EditText
+                android:id="@+id/et_OPT_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_border"
+                android:maxLength="1"
+                android:padding="20dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/black_find" />
+
+            <EditText
+                android:id="@+id/et_OPT_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_border"
+                android:maxLength="1"
+                android:padding="20dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/black_find" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_OTP_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LL_OTP_section"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/gilroy_bold"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/continue_"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonsize" />
+    </RelativeLayout>
+
+</RelativeLayout>

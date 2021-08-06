@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="nav_view">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/d_icon_home"
+            android:title="@string/home"
+            app:actionLayout="@layout/drawer_layout"/>
+        <item
+            android:id="@+id/nav_order_history"
+            android:icon="@drawable/d_icon_order_history"
+            android:title="@string/order_history"
+            app:actionLayout="@layout/drawer_layout"/>
+        <item
+            android:id="@+id/nav_reviews"
+            android:icon="@drawable/d_icon_reviews"
+            android:title="@string/reviews"
+            android:visible="false"
+            app:actionLayout="@layout/drawer_layout"/>
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@drawable/d_icon_profile"
+            android:title="@string/my_profile"
+            app:actionLayout="@layout/drawer_layout"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/d_icon_settings"
+            android:title="@string/settings"
+            app:actionLayout="@layout/drawer_layout"/>
+        <item
+            android:id="@+id/nav_legal"
+            android:icon="@drawable/d_icon_legal"
+            android:title="@string/legal"
+            android:visible="false"
+            app:actionLayout="@layout/drawer_layout"
+            />
+        <item
+            android:id="@+id/nav_logout"
+            app:actionLayout="@layout/drawer_logout"
+            android:visible="false"
+            tools:ignore="MenuTitle" />
+    </group>
+</menu>

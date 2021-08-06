@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_white"
+    android:layout_margin="20dp">
+
+    <com.pkmmte.view.CircularImageView
+        android:id="@+id/image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/plumber"
+        android:background="@drawable/circle_bg_black_white"/>
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="5 Start Plumbing"
+        android:layout_below="@+id/image"
+        android:textSize="@dimen/labelMediumSize"
+        android:gravity="center"
+        android:padding="10dp"
+        android:fontFamily="@font/gilroy_medium"/>
+
+    <LinearLayout
+        android:id="@+id/linearRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textName"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical|center_horizontal"
+            android:padding="0dp"
+            android:layout_marginLeft="5dp"
+            android:numStars="5"
+            android:progressTint="@color/primary_color"
+            style="?android:attr/ratingBarStyleSmall"/>
+
+        <TextView
+            android:id="@+id/textRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(4.0)">
+
+        </TextView>
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/bookmessage"
+        android:layout_below="@+id/linearRating"
+        android:textSize="@dimen/labelSize"
+
+        android:gravity="center"
+        android:padding="10dp"
+        android:fontFamily="@font/gilroy_medium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/dialogButtonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/image"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:backgroundTint="@android:color/black" />
+
+        <Button
+            android:id="@+id/dialogButtonOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yes"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/image"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
